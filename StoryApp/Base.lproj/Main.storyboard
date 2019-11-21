@@ -1,11 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Dl-fp-4Wg">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1GO-bd-Bgx">
+            <objects>
+                <navigationController id="4Dl-fp-4Wg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f5B-Ev-mNA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="D1S-gH-pWa" kind="relationship" relationship="rootViewController" id="wZh-Re-ckV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDN-oL-KwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794" y="22"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qc2-SV-4Jt">
+            <objects>
+                <viewController id="D1S-gH-pWa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qkp-UE-9qd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Badu pulang ke rumah. apa yang akan dilakukan oleh badu?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cmo-kd-upn">
+                                <rect key="frame" x="10" y="98" width="394" height="674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USH-yV-P1R">
+                                <rect key="frame" x="10" y="782" width="394" height="30"/>
+                                <state key="normal" title="Badu akan pergi ke kamar mandi"/>
+                                <connections>
+                                    <segue destination="GI4-Ng-YfW" kind="show" id="CrV-lI-pt1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-di-KOP">
+                                <rect key="frame" x="10" y="822" width="394" height="30"/>
+                                <state key="normal" title="Badu akan pergi ke dapur"/>
+                                <connections>
+                                    <segue destination="Ix2-Wu-HQT" kind="show" id="HIo-2h-nfW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0wg-Zq-KaQ" firstAttribute="bottom" secondItem="ePK-di-KOP" secondAttribute="bottom" constant="10" id="279-3c-mkh"/>
+                            <constraint firstItem="0wg-Zq-KaQ" firstAttribute="trailing" secondItem="ePK-di-KOP" secondAttribute="trailing" constant="10" id="3aF-sW-ZbN"/>
+                            <constraint firstItem="Cmo-kd-upn" firstAttribute="top" secondItem="0wg-Zq-KaQ" secondAttribute="top" constant="10" id="9If-ET-nH0"/>
+                            <constraint firstItem="ePK-di-KOP" firstAttribute="top" secondItem="USH-yV-P1R" secondAttribute="bottom" constant="10" id="CPB-RW-8FO"/>
+                            <constraint firstItem="ePK-di-KOP" firstAttribute="leading" secondItem="0wg-Zq-KaQ" secondAttribute="leading" constant="10" id="Ee4-el-pGv"/>
+                            <constraint firstItem="Cmo-kd-upn" firstAttribute="leading" secondItem="0wg-Zq-KaQ" secondAttribute="leading" constant="10" id="Mwo-TG-xtE"/>
+                            <constraint firstItem="USH-yV-P1R" firstAttribute="leading" secondItem="0wg-Zq-KaQ" secondAttribute="leading" constant="10" id="Rvl-ZU-wiF"/>
+                            <constraint firstItem="0wg-Zq-KaQ" firstAttribute="trailing" secondItem="Cmo-kd-upn" secondAttribute="trailing" constant="10" id="UBS-Zg-31Y"/>
+                            <constraint firstItem="0wg-Zq-KaQ" firstAttribute="trailing" secondItem="USH-yV-P1R" secondAttribute="trailing" constant="10" id="YJH-9e-w5E"/>
+                            <constraint firstItem="USH-yV-P1R" firstAttribute="top" secondItem="Cmo-kd-upn" secondAttribute="bottom" constant="10" id="mGy-lA-Le8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0wg-Zq-KaQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TQ8-jx-SQg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k34-vV-3fj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69" y="20"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hXq-dS-ci0">
+            <objects>
+                <viewController id="GI4-Ng-YfW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JYK-3q-9s2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Badu sudah berada di kamar mandi. apa yang akan selanjutnya dilakukan oleh badu?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hb6-gb-QsD">
+                                <rect key="frame" x="10" y="98" width="394" height="674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LB4-6r-q9R">
+                                <rect key="frame" x="10" y="782" width="394" height="30"/>
+                                <state key="normal" title="Badu akan pergi ke dapur"/>
+                                <connections>
+                                    <segue destination="Ix2-Wu-HQT" kind="show" id="rZh-a9-rWP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDz-cN-3jc">
+                                <rect key="frame" x="10" y="822" width="394" height="30"/>
+                                <state key="normal" title="Badu akan mandi"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DDz-cN-3jc" firstAttribute="top" secondItem="LB4-6r-q9R" secondAttribute="bottom" constant="10" id="IVf-ck-FqG"/>
+                            <constraint firstItem="Hb6-gb-QsD" firstAttribute="leading" secondItem="GY3-AG-7zj" secondAttribute="leading" constant="10" id="J2R-35-PfV"/>
+                            <constraint firstItem="GY3-AG-7zj" firstAttribute="trailing" secondItem="Hb6-gb-QsD" secondAttribute="trailing" constant="10" id="MtB-SG-DXU"/>
+                            <constraint firstItem="Hb6-gb-QsD" firstAttribute="top" secondItem="GY3-AG-7zj" secondAttribute="top" constant="10" id="ckb-Lq-9Zu"/>
+                            <constraint firstItem="GY3-AG-7zj" firstAttribute="trailing" secondItem="LB4-6r-q9R" secondAttribute="trailing" constant="10" id="dIC-tl-5e6"/>
+                            <constraint firstItem="LB4-6r-q9R" firstAttribute="leading" secondItem="GY3-AG-7zj" secondAttribute="leading" constant="10" id="eRE-6M-qwe"/>
+                            <constraint firstItem="DDz-cN-3jc" firstAttribute="leading" secondItem="GY3-AG-7zj" secondAttribute="leading" constant="10" id="eji-81-4LU"/>
+                            <constraint firstItem="LB4-6r-q9R" firstAttribute="top" secondItem="Hb6-gb-QsD" secondAttribute="bottom" constant="10" id="v2a-gx-PMT"/>
+                            <constraint firstItem="GY3-AG-7zj" firstAttribute="trailing" secondItem="DDz-cN-3jc" secondAttribute="trailing" constant="10" id="vn7-h7-9Jv"/>
+                            <constraint firstItem="GY3-AG-7zj" firstAttribute="bottom" secondItem="DDz-cN-3jc" secondAttribute="bottom" constant="10" id="wc8-mN-Ckw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GY3-AG-7zj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TE8-LP-bAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="-203"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pQl-B0-IEr">
+            <objects>
+                <viewController id="Ix2-Wu-HQT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fKU-gF-XQ7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Badu sudah berada di dapur. apa yang akan dilakukan oleh badu?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gy4-h5-ct4">
+                                <rect key="frame" x="10" y="98" width="394" height="674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-b8-yta">
+                                <rect key="frame" x="10" y="782" width="394" height="30"/>
+                                <state key="normal" title="Badu akan pergi ke kamar mandi"/>
+                                <connections>
+                                    <segue destination="GI4-Ng-YfW" kind="show" id="41f-LY-0Dy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsJ-ci-RXk">
+                                <rect key="frame" x="10" y="822" width="394" height="30"/>
+                                <state key="normal" title="Badu akan memakan sesuatu"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aOy-8T-tRA" firstAttribute="trailing" secondItem="gy4-h5-ct4" secondAttribute="trailing" constant="10" id="6m0-ch-nFp"/>
+                            <constraint firstItem="aOy-8T-tRA" firstAttribute="trailing" secondItem="DsJ-ci-RXk" secondAttribute="trailing" constant="10" id="8xn-hR-BzL"/>
+                            <constraint firstItem="DsJ-ci-RXk" firstAttribute="leading" secondItem="aOy-8T-tRA" secondAttribute="leading" constant="10" id="BMS-I1-zmI"/>
+                            <constraint firstItem="aOy-8T-tRA" firstAttribute="bottom" secondItem="DsJ-ci-RXk" secondAttribute="bottom" constant="10" id="F2t-gk-5mn"/>
+                            <constraint firstItem="gy4-h5-ct4" firstAttribute="leading" secondItem="aOy-8T-tRA" secondAttribute="leading" constant="10" id="Rs9-Ip-wq6"/>
+                            <constraint firstItem="aOy-8T-tRA" firstAttribute="trailing" secondItem="IKg-b8-yta" secondAttribute="trailing" constant="10" id="Zik-zx-BzF"/>
+                            <constraint firstItem="IKg-b8-yta" firstAttribute="top" secondItem="gy4-h5-ct4" secondAttribute="bottom" constant="10" id="eJg-Yx-Ar5"/>
+                            <constraint firstItem="DsJ-ci-RXk" firstAttribute="top" secondItem="IKg-b8-yta" secondAttribute="bottom" constant="10" id="oTt-qp-dY0"/>
+                            <constraint firstItem="IKg-b8-yta" firstAttribute="leading" secondItem="aOy-8T-tRA" secondAttribute="leading" constant="10" id="vik-TP-BEf"/>
+                            <constraint firstItem="gy4-h5-ct4" firstAttribute="top" secondItem="aOy-8T-tRA" secondAttribute="top" constant="10" id="zic-CR-rs7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aOy-8T-tRA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ib-sH-Lp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="519"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HIo-2h-nfW"/>
+        <segue reference="41f-LY-0Dy"/>
+    </inferredMetricsTieBreakers>
 </document>
